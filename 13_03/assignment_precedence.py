@@ -30,4 +30,6 @@ def assign_precedence():
     x >>= 9
     print(f'x >>= 9 results in value of x: {x}')
 
-assign_precedence()
+
+if __name__ == "__main__":
+    assign_precedence()

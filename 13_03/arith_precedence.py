@@ -1,13 +1,5 @@
 #programs on opertor precedence
-'''
-print(bin(3)[2:])
 
-print(bin(5)[2:].rjust(8,'0'))
-print(bin(6)[2:].rjust(8,'0'))
-print(bin(eval('5 and 6'))[2:].rjust(8,'0'))
-
-print(5 and 6)
-'''
 #Arithmetic opertors:
 def seperat():
     print()
@@ -66,7 +58,9 @@ def arith_precedence():
         f'exponent,left shit, additon,brackets, bitwise not,  substraction, multiplication division modulo division: ')
     print(f'{a} ** ({g}>>1) + ({b} - {~c}) * {d} / {e} % {f} = {result}')
     seperat()
-arith_precedence()
+
+if __name__ == '__main__':
+    arith_precedence()
 
 
 
