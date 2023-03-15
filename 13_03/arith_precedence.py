@@ -9,6 +9,11 @@ print(bin(eval('5 and 6'))[2:].rjust(8,'0'))
 print(5 and 6)
 '''
 #Arithmetic opertors:
+def seperat():
+    print()
+    print()
+    print('*'*100)
+
 def arith_precedence():
     a = 5
     b = -2
@@ -19,24 +24,48 @@ def arith_precedence():
     g = 3
     h = 56
     result = a + b - c
-    print(f'additon and substraction: {a} + {b} - {c} = {result}')
-    result = a + b - c * d
+    print(f'additon and substraction:')
+    print(f'{a} + {b} - {c} = {result}')
+    seperat()
 
-    print(f'additon, substraction, multiplication: {a} + {b} - {c} * {d} = {result}')
+    result = a + b - c * d
+    print(f'additon, substraction, multiplication:')
+    print(f'{a} + {b} - {c} * {d} = {result}')
+    seperat()
 
     result = a + b - c * d / e
-
-    print(f'additon, substraction, multiplication division: {a} + {b} - {c} * {d} / {e} = {result}')
+    print(f'additon, substraction, multiplication division: ')
+    print(f'{a} + {b} - {c} * {d} / {e} = {result}')
+    seperat()
 
     result = a + b - c * d / e % f
+    print(f'additon, substraction, multiplication division modulo division:')
+    print(f' {a} + {b} - {c} * {d} / {e} % {f} = {result}')
+    seperat()
 
-    print(f'additon, substraction, multiplication division modulo division: {a} + {b} - {c} * {d} / {e} % {f} = {result}')
     result = a ** g + b - c * d / e % f
-
     print(
-        f'additon, substraction, multiplication division modulo division: {a} ** {g} + {b} - {c} * {d} / {e} % {f} = {result}')
+        f'exponent, additon, substraction, multiplication division modulo division:')
+    print(f' {a} ** {g} + {b} - {c} * {d} / {e} % {f} = {result}')
 
+    seperat()
+    result = a ** g + (b - c) * d / e % f
+    print(
+        f'exponent, additon,brackets, substraction, multiplication, division, modulo division: ')
+    print(f'{a} ** {g} + ({b} - {c}) * {d} / {e} % {f} = {result}')
+    seperat()
 
+    result = a ** g + (b - ~c) * d / e % f
+    print(
+        f'exponent, additon,brackets, bitwise not,  substraction, multiplication division modulo division: ')
+    print(f'{a} ** {g} + ({b} - {~c}) * {d} / {e} % {f} = {result}')
+    seperat()
+
+    result = a ** (g>>1) + (b - ~c) * d / e % f
+    print(
+        f'exponent,left shit, additon,brackets, bitwise not,  substraction, multiplication division modulo division: ')
+    print(f'{a} ** ({g}>>1) + ({b} - {~c}) * {d} / {e} % {f} = {result}')
+    seperat()
 arith_precedence()
 
 
